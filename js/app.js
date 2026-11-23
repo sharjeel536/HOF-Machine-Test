@@ -768,15 +768,50 @@ cl(result120);
 const numbers5 = [12, 5, 8, 130, 44, 22, 99, 7, 15];
 
 // 1. Check if every number > 0
+let result121 = numbers5.every(num => num > 0);
+cl(result121);
+
+
 // 2. Check if every number is even
+let result122 = numbers5.every(num => num % 2 === 0);
+cl(result122);
+
+
 // 3. Check if every number is odd
+let result123 = numbers5.every(num => num % 2 !== 0);
+cl(result123);
+
+
 // 4. Check if every number < 150
+let result124 = numbers5.every(num => num < 150);
+cl(result124);
+
+
 // 5. Check if every number divisible by 5
+let result125 = numbers5.every(num => num % 5 === 0);
+cl(result125);
+
+
 // 6. Check if every number < 200
+let result126 = numbers5.every(num => num < 200);
+cl(result126);
+
+
 // 7. Check if every number is prime
 // 8. Check if every number > 10
+let result128 = numbers5.every(num => num > 10);
+cl(result128);
+
+
 // 9. Check if every number < 100
+let result129 = numbers5.every(num => num < 100);
+cl(result129);
+
+
 // 10. Check if every number not divisible by 3
+let result130 = numbers5.every(num => num % 3 !== 0);
+cl(result130);
+
 
 // Array 2 (Products)
 const products5 = [
@@ -787,10 +822,28 @@ const products5 = [
 ];
 
 // 11. Check if every product price > 100
+let result131 = products5.every(prod => prod.price > 100);
+cl(result131);
+
+
 // 12. Check if every product qty > 0
+let result132 = products5.every(prod => prod.quantity > 0);
+cl(result132);
+
+
 // 13. Check if every product name length > 3
+let result133 = products5.every(prod => prod.name.length > 3);
+cl(result133);
+
+
 // 14. Check if every product total value (price*qty) > 100
+let result134 = products5.every(prod => (prod.price * prod.qty) > 100);
+cl(result134);
+
 // 15. Check if every product price < 1500
+let result135 = products5.every(prod => prod.price < 1500);
+cl(result135);
+
 
 // Array 3 (Students)
 const students5 = [
@@ -801,18 +854,79 @@ const students5 = [
 ];
 
 // 16. Check if every student total marks > 200
+let result136 = students5.every((std) => {
+    let scor = 0;
+    for(let i = 0; i < std.marks.length; i++){
+        scor += std.marks[i];
+    }
+    return scor > 200;
+});
+cl(result136);
+
+
 // 17. Check if every student average marks > 60
+let result137 = students5.every((std) => {
+    let avg = 0;
+    let scor = 0;
+    for(let i = 0; i < std.marks.length; i++){
+        scor += std.marks[i];
+    }
+    avg = scor / std.marks.length;
+    return avg > 60;
+});
+cl(result137);
+
+
 // 18. Check if every student name length > 3
+let result138 = students5.every(std => std.name.length > 3 );
+cl(result138);
+
+ 
 // 19. Check if every student scored < 100 in all subjects
+let result139 = students5.every((std) => {
+    let scor = 0;
+    for(let i = 0; i < std.marks.length; i++){
+        scor += std.marks[i];
+    }
+    return scor < 100;
+});
+cl(result139);
+
+
 // 20. Check if every student total marks even
+let result140 = students5.every((std) => {
+    let scor = 0;
+    for(let i = 0; i < std.marks.length; i++){
+        scor += std.marks[i];
+    }
+    return scor % 2 === 0;
+});
+cl(result140);
+
 
 // Array 4 (Words)
 const words5 = ["apple", "banana", "mango", "apple", "orange", "banana", "apple"];
 
 // 21. Check if every word length > 3
+let result141 = words5.every((fru) => fru.length > 3);
+cl(result141);
+
+
 // 22. Check if every word contains letter "a"
+let result142 = words5.every((fru) => fru.includes("a"));
+cl(result142);
+
+
 // 23. Check if every word starts with a lowercase letter
+let result143 = words5.every((fru) => fru[0] === "a" || fru[0] === "b" || fru[0] === "m" || fru[0] === "o");
+cl(result143);
+
+
 // 24. Check if every word ends with a vowel
+let result144 = words5.every((fru) => fru[fru.length-1] === "a" || fru[fru.length-1] === "e" || fru[fru.length-1] === "i" || fru[fru.length-1] === "o" || fru[fru.length-1] === "u");
+cl(result144);
+
+
 // 25. Check if every word is unique (true/false)
 
 // Array 5 (Transactions)
@@ -825,10 +939,28 @@ const transactions5 = [
 ];
 
 // 26. Check if every transaction amount > 0
+let result146 = transactions5.every(trans => trans.amount > 0);
+cl(result146);
+
+
 // 27. Check if every credit transaction amount > 100
+let result147 = transactions5.every(trans => (trans.amount > 100 && trans.type === "credit"));
+cl(result147);
+
+
 // 28. Check if every debit transaction amount < 500
+let result148 = transactions5.every(trans => (trans.amount < 500 && trans.type === "debit"));
+cl(result148);
+
+
 // 29. Check if every transaction type is string
+let result149 = transactions5.every(trans => (typeof trans.type) === "string");
+cl(result149);
+
+
 // 30. Check if every transaction id < 10
+let result150 = transactions5.every(trans => trans.id < 10);
+cl(result150);
 
 
 // FILL – 30 Tasks
@@ -837,48 +969,155 @@ const transactions5 = [
 const numbers6 = [12, 5, 8, 130, 44, 22, 99, 7, 15];
 
 // 1. Fill all elements with 0
+let result151 = numbers6.fill(0);
+cl(result151);
+
+
 // 2. Fill first 3 elements with 100
+let result152 = numbers6.fill(100, 0,3);
+cl(result152);
+
+
 // 3. Fill last 2 elements with -1
+let result153 = numbers6.fill(-1,numbers6.length-2);
+cl(result153);
+
+
 // 4. Fill elements from index 2 to 5 with 50
+let result154 = numbers6.fill(50,2,6);
+cl(result154);
+
+
 // 5. Fill elements from index 0 to 4 with 9
+let result155 = numbers6.fill(9,0,5);
+cl(result155);
+
+
 // 6. Fill elements greater than 50 with 500
+let result156 = function(arr){
+    for(let i = 0; i < arr.length; i++){
+    if(arr[i] > 50){
+        arr.fill(500)
+    }
+    return arr;
+}}
+cl(result156(numbers6));
+
+
 // 7. Fill even index elements with 0
 // 8. Fill odd index elements with -1
 // 9. Fill middle 3 elements with 999
+let result159 = function(arr){
+    for(let i = 0; i < arr.length; i++){
+    numbers6.fill(999,(Math.floor(arr.length/2))-1,(Math.floor(arr.length/2))+2)
+    return arr;
+}}
+cl(result159(numbers6));
+
+
 // 10. Fill all numbers divisible by 5 with 555
+let result160 = function(arr){
+    for(let i = 0; i < arr.length; i++){
+    if(arr[i] % 5 === 0){
+        arr.fill(555)
+    }
+    return arr;
+}}
+cl(result160(numbers6));
+
 
 // Array 2 (Products)
 const products6 = ["Laptop", "Phone", "Tablet", "Headphones"];
 
 // 11. Fill all product names with "Unknown"
+let result161 = products6.fill("Unknown",0);
+cl(result161);
+
+
 // 12. Fill first 2 products with "Gadget"
+let result162 = products6.fill("Gadget",0,2);
+cl(result162);
+
+
 // 13. Fill last product with "Accessory"
+let result163 = products6.fill("Accessory",-2);
+cl(result163);
+
+
 // 14. Fill products from index 1 to 3 with "Device"
+let result164 = products6.fill("Device",1,4);
+cl(result164);
+
+
 // 15. Fill product names starting with "P" with "PhoneItem"
+
 
 // Array 3 (Students)
 const students6 = ["Aman", "Ravi", "Neha", "Simran"];
 
 // 16. Fill all student names with "Anonymous"
+let result166 = students6.fill("Anonymous",0);
+cl(result166);
+
+
 // 17. Fill first student name with "Student1"
+let result167 = students6.fill("Student1",0,1);
+cl(result167);
+
+
 // 18. Fill last student name with "Student4"
+let result168 = students6.fill("Student4",-1);
+cl(result168);
+
+
 // 19. Fill middle 2 student names with "TempName"
+let result169 = students6.fill("TempName",1,3);
+cl(result169);
+
+
 // 20. Fill student names starting with "N" with "NStudent"
 
 // Array 4 (Boolean Array)
 const flags6 = [true, false, true, false, true];
 
 // 21. Fill all elements with false
+let result171 = flags6.fill("false",0);
+cl(result171);
+
+
 // 22. Fill first 2 elements with true
+let result172 = flags6.fill("true",0,2);
+cl(result172);
+
+
 // 23. Fill last 2 elements with true
+let result173 = flags6.fill("true",-2);
+cl(result173);
+
+
 // 24. Fill middle element with false
+let result174 = flags6.fill("false",Math.floor(flags6.length/2),1);
+cl(result174);
+
+
 // 25. Fill elements at even index with false
 
 // Array 5 (Mixed Array)
 const mixed6 = [1, "a", true, 5, "b", false, 10];
 
 // 26. Fill all numbers with 0
+let result176 = mixed6.fill(0,0);
+cl(result176);
+
+
 // 27. Fill all strings with "x"
 // 28. Fill all booleans with true
 // 29. Fill first 3 elements with null
+let result179 = mixed6.fill(null,0,3);
+cl(result179);
+
+
 // 30. Fill last 3 elements with undefined
+let result180 = mixed6.fill(undefined,-3);
+cl(result180);
+
